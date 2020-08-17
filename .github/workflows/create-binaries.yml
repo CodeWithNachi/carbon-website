@@ -31,6 +31,8 @@ jobs:
           mv public docs
           mkdir public
           mv docs public/docs
+          cd public
+          find .
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.5.9
