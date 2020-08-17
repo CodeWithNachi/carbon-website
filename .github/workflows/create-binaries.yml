@@ -28,16 +28,9 @@ jobs:
       
       - name: package
         run: |
-          cd public
-          find .
-          cd -
           mv public docs
-          cd docs
-          find .
-          cd -
           mkdir public
           mv docs public/docs
-          cd public
           find .
 
       - name: Deploy
