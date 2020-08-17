@@ -1,4 +1,4 @@
-name: Create Binaries
+name: CreateBinaries
 
 on:
   push:
