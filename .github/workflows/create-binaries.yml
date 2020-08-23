@@ -28,9 +28,9 @@ jobs:
       
       - name: package
         run: |
-          # mv public docs
-          # mkdir public
-          # mv docs public/docs
+          mv public docs
+          mkdir -p public/docs
+          mv docs/* public/docs
           find .
 
       - name: Deploy
