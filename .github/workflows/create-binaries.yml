@@ -26,6 +26,16 @@ jobs:
       - name: Build site
         run: node --max-old-space-size=4096 ./node_modules/.bin/gatsby build #--prefix-paths
       
+      - name: Publish Site
+        uses: appleboy/gh-pages-action
+        with:
+          target_directory: docs
+          pages_directory: public
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          remote_url: https://github.com/CodeWithNachi/carbon-website.git
+      
+      
       - name: package
         run: |
           mv public docs
